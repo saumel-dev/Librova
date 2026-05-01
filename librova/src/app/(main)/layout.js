@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import '@/app/globals.css'
 import Navbar from "@/Components/Shared/Navbar";
-
 const inter = Inter({
   variable: "--font-inter-sans",
   subsets: ["latin"]

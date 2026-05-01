@@ -4,7 +4,10 @@ import { Link, Button } from "@heroui/react";
 import Navlink from "./Navlink";
 import Image from "next/image";
 import logo from '@/assets/logo.png'
+import { authClient, useSession } from "@/app/lib/auth-client";
 const Navbar = () => {
+    const { data: session } = authClient.useSession();
+    const user = session?.user;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="w-full my-5 nav-text">
@@ -41,28 +44,46 @@ const Navbar = () => {
                             </svg>
                         </button>
                         <div><Link className="no-underline text-xl  nav-text" href='/'>
-                        <Image
-                        src={logo}
-                        alt="logo"
-                        width={50}
-                        height={50}
-                        ></Image>
-                        LibRova</Link></div>
+                            <Image
+                                src={logo}
+                                alt="logo"
+                                width={50}
+                                height={50}
+                            ></Image>
+                            LibRova</Link></div>
                     </div>
                     <ul className="hidden items-center gap-4 md:flex">
                         <li>
-                            <Navlink  href="/">Home</Navlink>
+                            <Navlink href="/">Home</Navlink>
                         </li>
                         <li>
-                            <Navlink  href="/all-books">All Books</Navlink>
+                            <Navlink href="/all-books">All Books</Navlink>
                         </li>
                         <li>
-                            <Navlink  href="/profile">My Profile</Navlink>
+                            <Navlink href="/profile">My Profile</Navlink>
                         </li>
                     </ul>
                     <div className="flex gap-3">
-                        <Navlink href="/login">Login</Navlink >
-                        <Navlink href="/register">Register</Navlink >
+                        {
+                            user ? (<div className='flex items-center gap-2'>
+                                <h2>Hello {user.name}</h2>
+                                <Image
+                                    className="rounded-full"
+                                    src={user?.image}
+                                    alt='user'
+                                    width={40}
+                                    height={40}
+                                />
+                                <button onClick={async () => await authClient.signOut()} className=' text-white'>Logout</button>
+                            </div>
+                            ) : (
+                                <div className="flex gap-3">
+                                    <Navlink href="/register">Register</Navlink >
+                                    <Navlink href="/login">Login</Navlink >
+                                </div>
+                            )
+                        }
+
                     </div>
                 </header>
                 {isMenuOpen && (
