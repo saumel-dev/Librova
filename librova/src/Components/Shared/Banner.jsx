@@ -4,7 +4,7 @@ import { FiArrowUpRight } from 'react-icons/fi';
 
 const Banner = () => {
     return (
-        <div className='bg-[#FFFFFF] max-w-135 md:max-w-3xl lg:max-w-5xl rounded-xl mx-auto'>
+        <div className='bg-[#FFFFFF] max-w-135 md:max-w-3xl lg:max-w-6xl rounded-xl mx-auto'>
             <div className='flex flex-col justify-center items-center py-15 lg:py-25 space-y-4'>
                 <div className='italic text-5xl text-center text-[#1A1A1A] space-y-4'>
                     <h1 className='text-[#9B9B9B]'>Your next chapter starts here</h1>
