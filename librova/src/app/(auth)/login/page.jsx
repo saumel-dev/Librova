@@ -4,7 +4,12 @@ import { Check } from "@gravity-ui/icons";
 import { FcGoogle } from 'react-icons/fc';
 import Link from 'next/link';
 import { authClient } from '@/app/lib/auth-client';
+import { useRouter } from 'next/navigation';
+
+const noop = () => { };
+
 const LoginPage = () => {
+    const router = useRouter();
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -14,17 +19,30 @@ const LoginPage = () => {
             email,
             password,
             rememberMe: true,
-            callbackURL: "/",
+            // callbackURL: "/",
         });
         if (error) {
-            toast.danger("Login Failed", {
-                description: error.message || "Invalid email or password.",
-            });
-            return;
+            toast.danger(error.message, {
+                actionProps: {
+                    children: "",
+                    variant: "danger",
+                },
+                description: "Please check your credentials and try again"
+            })
         }
-        toast.success("Welcome", {
-            description: "You have successfully logged in.",
-        });
+        else {
+            toast.success("Successfully Login", {
+                actionProps: {
+                    children: "",
+                    className: "bg-success text-success-foreground",
+                    onPress: noop,
+                },
+                description: "Enjoy LibRova",
+            })
+            setTimeout(() => {
+                router.push('/');
+            }, 1000);
+        }
     }
     const handleLoginGoogle = async () => {
         const data = await authClient.signIn.social({
@@ -33,7 +51,7 @@ const LoginPage = () => {
     };
     return (
         <div className='min-h-screen w-full flex justify-center items-center'>
-            <div className='bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
+            <div className='bg-white backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
                 <Form action={""} className="flex w-96 text-white flex-col gap-4" onSubmit={handleLogin}>
                     <TextField
                         isRequired
@@ -46,7 +64,7 @@ const LoginPage = () => {
                             return null;
                         }}
                     >
-                        <Label className='text-white'>Email</Label>
+                        <Label className='text-[#1A1A1A]'>Email</Label>
                         <Input placeholder="john@example.com" />
                         <FieldError />
                     </TextField>
@@ -68,9 +86,9 @@ const LoginPage = () => {
                             return null;
                         }}
                     >
-                        <Label className='text-white'>Password</Label>
+                        <Label className='text-[#1A1A1A]'>Password</Label>
                         <Input placeholder="Enter your password" />
-                        <Description className='text-gray-300'>Must be at least 8 characters with 1 uppercase and 1 number</Description>
+                        <Description className='text-gray-600'>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                         <div className="flex gap-2 justify-center mt-2">
                             <Button type="submit">
@@ -87,7 +105,7 @@ const LoginPage = () => {
                                 <FcGoogle></FcGoogle>
                                 Sign in with Google
                             </Button>
-                            <p className='text-[14px]'>Dont have an Account? <span className='text-sky-300'><Link href="/register">Register</Link></span></p>
+                            <p className='text-[14px] text-gray-600'>Dont have an Account? <span className='text-sky-600'><Link href="/register">Register</Link></span></p>
                         </div>
                     </TextField>
 

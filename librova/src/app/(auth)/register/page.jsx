@@ -21,7 +21,7 @@ const RegistrationPage = () => {
         })
         if(!error)
         {
-            router.push('/');
+            router.push('/login');
         }
         if(error)
         {
@@ -31,14 +31,14 @@ const RegistrationPage = () => {
     }
     return (
         <div className='min-h-screen w-full flex justify-center items-center'>
-            <div className='bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
+            <div className='bg-[#FFFFFF] backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
                 <Form action={""} className="flex w-96 text-white flex-col gap-4" onSubmit={handleRegister}>
                     <TextField
                         isRequired
                         name="name"
                         type="text"
                     >
-                        <Label className='text-white'>Name</Label>
+                        <Label className='text-[#1A1A1A]'>Name</Label>
                         <Input placeholder="Enter your Username" />
                     </TextField>
                     <TextField
@@ -52,7 +52,7 @@ const RegistrationPage = () => {
                             return null;
                         }}
                     >
-                        <Label className='text-white'>Email</Label>
+                        <Label className='text-[#1A1A1A]'>Email</Label>
                         <Input placeholder="john@example.com" />
                         <FieldError />
                     </TextField>
@@ -74,9 +74,9 @@ const RegistrationPage = () => {
                             return null;
                         }}
                     >
-                        <Label className='text-white'>Password</Label>
+                        <Label className='text-[#1A1A1A]'>Password</Label>
                         <Input placeholder="Enter your password" />
-                        <Description className='text-gray-300'>Must be at least 8 characters with 1 uppercase and 1 number</Description>
+                        <Description className='text-gray-500'>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>
                     <TextField
@@ -84,7 +84,7 @@ const RegistrationPage = () => {
                         name="image"
                         type="text"
                     >
-                        <Label className='text-white'>Photo</Label>
+                        <Label className='text-[#1A1A1A]'>Photo</Label>
                         <Input placeholder="Enter your photo URL" />
                     </TextField>
                     <div className="flex gap-2 justify-center">
@@ -96,9 +96,9 @@ const RegistrationPage = () => {
                             Reset
                         </Button>
                     </div>
-                        <p className='text-center text-sm'>or</p>
-                        <div className='space-y-4 flex flex-col justify-center items-center'>
-                            <p className='text-[14px]'>Already have an Account? <span className='text-sky-300'><Link href="/login">Login</Link></span></p>
+                        <p className='text-center text-sm text-[#1A1A1A]'>or</p>
+                        <div className='space-y-2 flex flex-col justify-center items-center'>
+                            <p className='text-[14px] text-[#1A1A1A]'>Already have an Account? <span className='text-sky-300'><Link href="/login">Login</Link></span></p>
                         </div>
                 </Form>
             </div>

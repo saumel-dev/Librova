@@ -11,7 +11,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="w-full my-5 nav-text">
-            <nav className="sticky max-w-7xl mx-auto top-0 z-40 w-full rounded-full bg-[#30230cb6]/60 shadow backdrop-blur-md">
+            <nav className="sticky max-w-7xl mx-auto top-0 z-40 w-full rounded-full bg-[#F9F7F2] shadow backdrop-blur-md">
                 <header className="flex h-16 items-center justify-between px-6 text-[14px]">
                     <div className="flex items-center gap-4">
                         <button
@@ -43,7 +43,7 @@ const Navbar = () => {
                                 )}
                             </svg>
                         </button>
-                        <div><Link className="no-underline text-xl  nav-text" href='/'>
+                        <div><Link className="no-underline text-xl text-[#1A1A1A]" href='/'>
                             <Image
                                 src={logo}
                                 alt="logo"
@@ -74,7 +74,7 @@ const Navbar = () => {
                                     width={40}
                                     height={40}
                                 />
-                                <button onClick={async () => await authClient.signOut()} className=' text-white'>Logout</button>
+                                <button onClick={async () => await authClient.signOut()} className=' text-[#1A1A1A]'>Logout</button>
                             </div>
                             ) : (
                                 <div className="flex gap-3">

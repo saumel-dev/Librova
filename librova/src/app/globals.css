@@ -2,16 +2,16 @@
 @import "@heroui/styles";
 
 :root {
-  --bg-gradient: #25211a;
+  --bg-gradient: #E8E5DF;
 }
 
 html, body {
-  background: #25211a;
+  background: #E8E5DF;
   margin: 0;
   padding: 0;
   min-height: 100%;
 }
 
 .nav-text {
-  color: rgb(216,212,207);
+  color: #8F8E8B;
 }
