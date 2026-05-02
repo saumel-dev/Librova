@@ -5,6 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 import Link from 'next/link';
 import { authClient } from '@/app/lib/auth-client';
 import { useRouter } from 'next/navigation';
+import 'animate.css';
 
 const noop = () => { };
 
@@ -51,7 +52,7 @@ const LoginPage = () => {
     };
     return (
         <div className='min-h-screen w-full flex justify-center items-center'>
-            <div className='bg-white backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
+            <div className='bg-white animate__animated animate__pulse backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
                 <Form action={""} className="flex w-96 text-white flex-col gap-4" onSubmit={handleLogin}>
                     <TextField
                         isRequired

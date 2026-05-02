@@ -1,9 +1,12 @@
 'use client'
-import { Button, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
+import { Button, Description, FieldError, Form, Input, Label, TextField, toast } from '@heroui/react';
 import { Check } from "@gravity-ui/icons";
 import Link from 'next/link';
 import { authClient } from '@/app/lib/auth-client';
 import { useRouter } from 'next/navigation';
+import 'animate.css';
+
+const noop = () => { };
 const RegistrationPage = () => {
     const router = useRouter();
     const handleRegister = async (e) => {
@@ -19,19 +22,32 @@ const RegistrationPage = () => {
             password,
             image,
         })
-        if(!error)
-        {
-            router.push('/login');
+        if (error) {
+            toast.danger(error.message, {
+                actionProps: {
+                    children: "",
+                    variant: "danger",
+                },
+                description: "Please try again"
+            })
         }
-        if(error)
-        {
-            console.log(error.message);
-            
+        else {
+            toast.success("Account created Successfully", {
+                actionProps: {
+                    children: "",
+                    className: "bg-success text-success-foreground",
+                    onPress: noop,
+                },
+                description: "Login to Enjoy LibRova",
+            })
+            setTimeout(() => {
+                router.push('/login');
+            }, 1000);
         }
     }
     return (
-        <div className='min-h-screen w-full flex justify-center items-center'>
-            <div className='bg-[#FFFFFF] backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
+        <div className=' min-h-screen w-full flex justify-center items-center'>
+            <div className='bg-[#FFFFFF] animate__animated animate__pulse backdrop-blur-md border border-white/20 p-8 rounded-2xl '>
                 <Form action={""} className="flex w-96 text-white flex-col gap-4" onSubmit={handleRegister}>
                     <TextField
                         isRequired
@@ -96,10 +112,10 @@ const RegistrationPage = () => {
                             Reset
                         </Button>
                     </div>
-                        <p className='text-center text-sm text-[#1A1A1A]'>or</p>
-                        <div className='space-y-2 flex flex-col justify-center items-center'>
-                            <p className='text-[14px] text-[#1A1A1A]'>Already have an Account? <span className='text-sky-300'><Link href="/login">Login</Link></span></p>
-                        </div>
+                    <p className='text-center text-sm text-[#1A1A1A]'>or</p>
+                    <div className='space-y-2 flex flex-col justify-center items-center'>
+                        <p className='text-[14px] text-[#1A1A1A]'>Already have an Account? <span className='text-sky-600'><Link href="/login">Login</Link></span></p>
+                    </div>
                 </Form>
             </div>
         </div>
