@@ -1,6 +1,8 @@
 import Banner from "@/Components/Shared/Banner";
 import FeaturedBooks from "@/Components/Shared/FeaturedBooks";
 import NewArrivalsBooks from "@/Components/Shared/NewArrivals";
+import ReviewPage from "@/Components/Shared/Review";
+import Stats from "@/Components/Shared/Stats";
 import Image from "next/image";
 
 export const metadata = {
@@ -14,6 +16,8 @@ export default function Home() {
       <Banner></Banner>
       <NewArrivalsBooks></NewArrivalsBooks>
       <FeaturedBooks></FeaturedBooks>
+      <Stats></Stats>
+      <ReviewPage></ReviewPage>
     </div>
   );
 }

@@ -11,7 +11,7 @@ const FeaturedBooks = async () => {
     const books = await GetBooks();
     return (
         <div className='max-w-135 md:max-w-3xl lg:max-w-7xl mx-auto'>
-            <div className='mt-6 animate__animated animate__slideInUp grid grid-cols-4 justify-items-center'>
+            <div className='mt-6 animate__animated animate__slideInUp flex flex-wrap justify-center items-center gap-4 justify-items-center'>
                 {
                     books.slice(4, 8).map(book => (
                         <Card key={book.id} className="min-h-90 w-70 overflow-hidden rounded-3xl">
