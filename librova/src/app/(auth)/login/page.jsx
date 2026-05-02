@@ -1,5 +1,5 @@
 'use client'
-import { Button, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
+import { Button, Description, FieldError, Form, Input, Label, TextField, toast } from '@heroui/react';
 import { Check } from "@gravity-ui/icons";
 import { FcGoogle } from 'react-icons/fc';
 import Link from 'next/link';
@@ -15,6 +15,15 @@ const LoginPage = () => {
             password,
             rememberMe: true,
             callbackURL: "/",
+        });
+        if (error) {
+            toast.danger("Login Failed", {
+                description: error.message || "Invalid email or password.",
+            });
+            return;
+        }
+        toast.success("Welcome", {
+            description: "You have successfully logged in.",
         });
     }
     const handleLoginGoogle = async () => {
