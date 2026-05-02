@@ -1,10 +1,14 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import '@/app/globals.css'
 import Navbar from "@/Components/Shared/Navbar";
-const inter = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"]
-})
+
+const urbanist = Urbanist({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-urbanist',
+  weight: ['300', '400', '700'],
+  style: ['normal', 'italic'],
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -12,7 +16,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={"h-full antialiased"}
     >
-      <body className={`${inter.className} min-h-full flex flex-col`}>
+      <body className={`${urbanist.className} min-h-full flex flex-col`}>
         <Navbar></Navbar>
         {children}
       </body>
