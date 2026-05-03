@@ -1,36 +1,41 @@
+import BorrowButton from '@/Components/BorrowButton';
+import Navlink from '@/Components/Shared/Navlink';
 import { GetBooksById } from '@/data/books';
-import { Card } from '@heroui/react';
+import { Button, Card, CloseButton, toast } from '@heroui/react';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const BookDetails = async ({ params }) => {
     const { bookId } = await params;
     const book = await GetBooksById(bookId);
+   
     return (
-        <div>
-            <Card className="w-full items-stretch md:flex-row">
-                <div className="relative h-35 w-full shrink-0 overflow-hidden rounded-2xl sm:h-30 sm:w-30">
-                    <img
+        <div className='container mx-auto px-5'>
+            <Card className="flex flex-row justify-center items-center gap-10 flex-wrap">
+                <div>
+                    <Image
                         alt="Cherries"
-                        className="pointer-events-none absolute inset-0 h-full w-full scale-125 object-cover select-none"
+                        className=" rounded-2xl "
                         loading="lazy"
-                        src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/cherries.jpeg"
+                        width={400}
+                        height={300}
+                        src={book.image_url}
                     />
                 </div>
-                <div className="flex flex-1 flex-col gap-3">
-                    <Card.Header className="gap-1">
-                        <Card.Title className="pr-8">Become an ACME Creator!</Card.Title>
-                        <Card.Description>
-                            Lorem ipsum dolor sit amet consectetur. Sed arcu donec id aliquam dolor sed amet
-                            faucibus etiam.
+                <div className="flex flex-col gap-3 space-y-4">
+                    <Card.Header className="space-y-4">
+                        <Card.Title className="text-4xl">{book.title}</Card.Title>
+                        <p className='font-bold text-xl'>{book.author}</p>
+                        <Card.Description className='text-xl xl:w-200'>
+                            {book.description}
                         </Card.Description>
-                        <CloseButton aria-label="Close banner" className="absolute top-3 right-3" />
                     </Card.Header>
                     <Card.Footer className="mt-auto flex w-full flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
                         <div className="flex flex-col">
-                            <span className="text-sm font-medium text-foreground">Only 10 spots</span>
-                            <span className="text-xs text-muted">Submission ends Oct 10.</span>
+                            <p>Available Quantity: {book.available_quantity}</p>
+                            <BorrowButton></BorrowButton>
                         </div>
-                        <Button className="w-full sm:w-auto">Apply Now</Button>
                     </Card.Footer>
                 </div>
             </Card>
