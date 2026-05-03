@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Navlink from './Navlink';
+import BookDetailsButton from '../BookDetailsButton';
 const FeaturedBooks = async () => {
     const books = await GetBooks();
     return (
@@ -36,9 +37,7 @@ const FeaturedBooks = async () => {
                                 <p className='mt-25'>{book.description}</p>
                             </Card.Header>
                             <Card.Footer className="z-10 mt-auto flex items-center justify-between">
-                                <Navlink href={`/books/details/${book.id}`}><Button className="bg-white text-black" size="sm" variant="outline">
-                                    View Details
-                                </Button></Navlink>
+                                <BookDetailsButton bookId={book.id}></BookDetailsButton>
                             </Card.Footer>
                         </Card>
                     ))

@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee';
 
 const NewArrivalsBooks = () => {
     return (
-        <div className='max-w-135 md:max-w-3xl lg:max-w-6xl mt-6 p-3 mx-auto bg-white rounded-xl'>
+        <div className='max-w-135 md:max-w-3xl lg:max-w-6xl mt-6 p-3 mx-5 md:mx-auto bg-white rounded-xl'>
             <div className='flex'>
                 <p className='w-max font-bold text-[#1A1A1A] whitespace-nowrap px-2'>New Arrivals:</p>
                 <Marquee>

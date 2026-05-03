@@ -14,8 +14,8 @@ const BooksPage = async ({ params, searchParams }) => {
     return (
         <div className='container mx-auto py-10 px-4'>
             <SearchBar></SearchBar>
-            <div className='flex gap-6'>
-                <div className='w-64 shrink-0'>
+            <div className='flex flex-col lg:flex-row items-center justify-center lg:items-start lg:justify-start gap-6'>
+                <div className='w-auto shrink-0'>
                     <LeftSideBar categories={categories} activeCategory={category}></LeftSideBar>
                 </div>
                 <div className='flex-1'>
