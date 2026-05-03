@@ -4,12 +4,16 @@ import LeftSideBar from './LeftSideBar';
 import Link from 'next/link';
 import Image from 'next/image';
 import SearchBar from '@/Components/Shared/SearchBar';
+import DetailsButton from './DetailsButton';
 
 const BooksPage = async ({ params, searchParams }) => {
     const { category } = await params;
     const { search } = await searchParams;
     const categories = await GetCategory();
     const books = await GetBooksByCategory(category, search);
+    const handleBookDetails = () => {
+
+    } 
     return (
         <div className='container mx-auto py-10 px-4'>
             <SearchBar></SearchBar>
@@ -32,11 +36,7 @@ const BooksPage = async ({ params, searchParams }) => {
                                     <h3 className='font-bold mt-2 text-md'>
                                         {book.title}
                                     </h3>
-                                    <Link href={`/books/details/${book.id}`}>
-                                        <button className='mt-2 w-full bg-black text-white text-xs py-2 rounded'>
-                                            Details
-                                        </button>
-                                    </Link>
+                                    <DetailsButton bookId={book.id}></DetailsButton>
                                 </div>
                             </div>
                         ))}

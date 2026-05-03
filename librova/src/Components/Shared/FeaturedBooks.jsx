@@ -36,7 +36,7 @@ const FeaturedBooks = async () => {
                                 <p className='mt-25'>{book.description}</p>
                             </Card.Header>
                             <Card.Footer className="z-10 mt-auto flex items-center justify-between">
-                                <Navlink href={`/books/${book.id}`}><Button className="bg-white text-black" size="sm" variant="outline">
+                                <Navlink href={`/books/details/${book.id}`}><Button className="bg-white text-black" size="sm" variant="outline">
                                     View Details
                                 </Button></Navlink>
                             </Card.Footer>
