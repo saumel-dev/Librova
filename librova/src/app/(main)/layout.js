@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={"h-full antialiased"}
+      suppressHydrationWarning={true} 
     >
       <body className={`${urbanist.className} min-h-full flex flex-col`}>
         <Navbar></Navbar>

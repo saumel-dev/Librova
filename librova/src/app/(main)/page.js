@@ -1,5 +1,6 @@
 import Banner from "@/Components/Shared/Banner";
 import FeaturedBooks from "@/Components/Shared/FeaturedBooks";
+import Footer from "@/Components/Shared/Footer";
 import NewArrivalsBooks from "@/Components/Shared/NewArrivals";
 import ReviewPage from "@/Components/Shared/Review";
 import Stats from "@/Components/Shared/Stats";
@@ -18,6 +19,7 @@ export default function Home() {
       <FeaturedBooks></FeaturedBooks>
       <Stats></Stats>
       <ReviewPage></ReviewPage>
+      <Footer></Footer>
     </div>
   );
 }

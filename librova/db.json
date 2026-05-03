@@ -1,252 +1,356 @@
-    {
-        "categories": [
-            {
-                "id": "1",
-                "name": "All",
-                "value": "all"
-            },
-            {
-                "id": "2",
-                "name": "Story",
-                "value": "story"
-            },
-            {
-                "id": "3",
-                "name": "Tech",
-                "value": "tech"
-            },
-            {
-                "id": "4",
-                "name": "Science",
-                "value": "science"
-            },
-            {
-                "id": "5",
-                "name": "Self Help",
-                "value": "self_help"
-            },
-            {
-                "id": "6",
-                "name": "Fantasy",
-                "value": "fantasy"
-            }
-        ],
-        "books": [
-            {
-                "id": "1",
-                "title": "The Midnight Library",
-                "author": "Matt Haig",
-                "description": "Between life and death there is a library with infinite books, each representing a different life you could have lived. Nora Seed must decide what makes life worth living.",
-                "category": "story",
-                "available_quantity": 5,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1602190253i/52578297.jpg"
-            },
-            {
-                "id": "2",
-                "title": "To Kill a Mockingbird",
-                "author": "Harper Lee",
-                "description": "A gripping tale of racial injustice and childhood innocence in the American South, seen through the eyes of young Scout Finch and her father, lawyer Atticus Finch.",
-                "category": "story",
-                "available_quantity": 7,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg"
-            },
-            {
-                "id": "3",
-                "title": "The Alchemist",
-                "author": "Paulo Coelho",
-                "description": "A young shepherd named Santiago travels from Spain to Egypt in search of treasure. Along the way he discovers that the real treasure lies in the journey itself.",
-                "category": "story",
-                "available_quantity": 9,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg"
-            },
-            {
-                "id": "4",
-                "title": "1984",
-                "author": "George Orwell",
-                "description": "A dystopian novel set in a totalitarian society ruled by Big Brother. Winston Smith secretly rebels against the oppressive regime in a chilling tale of surveillance and control.",
-                "category": "story",
-                "available_quantity": 6,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1657781256i/61439040.jpg"
-            },
-            {
-                "id": "5",
-                "title": "The Great Gatsby",
-                "author": "F. Scott Fitzgerald",
-                "description": "Set in the Jazz Age, this novel follows the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan, exploring themes of wealth and the American Dream.",
-                "category": "story",
-                "available_quantity": 4,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490528560i/4671.jpg"
-            },
-            {
-                "id": "6",
-                "title": "Pride and Prejudice",
-                "author": "Jane Austen",
-                "description": "The story of Elizabeth Bennet and the proud Mr. Darcy as they navigate issues of marriage, morality, and misconception in 19th century England. A timeless classic of English literature.",
-                "category": "story",
-                "available_quantity": 8,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320399351i/1885.jpg"
-            },
-            {
-                "id": "7",
-                "title": "Clean Code",
-                "author": "Robert C. Martin",
-                "description": "A handbook of agile software craftsmanship that teaches programmers how to write clean, readable, and maintainable code with practical examples and timeless principles.",
-                "category": "tech",
-                "available_quantity": 8,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1436202607i/3735293.jpg"
-            },
-            {
-                "id": "8",
-                "title": "The Pragmatic Programmer",
-                "author": "Andrew Hunt & David Thomas",
-                "description": "A collection of tips and best practices for software developers covering topics from personal responsibility to architectural techniques for writing flexible and maintainable code.",
-                "category": "tech",
-                "available_quantity": 6,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1401432508i/4099.jpg"
-            },
-            {
-                "id": "9",
-                "title": "You Don't Know JS",
-                "author": "Kyle Simpson",
-                "description": "A deep dive into the core mechanisms of JavaScript. This book series challenges common assumptions and teaches developers how JavaScript truly works under the hood.",
-                "category": "tech",
-                "available_quantity": 10,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488835077i/22221700.jpg"
-            },
-            {
-                "id": "10",
-                "title": "JavaScript: The Good Parts",
-                "author": "Douglas Crockford",
-                "description": "Douglas Crockford identifies the elegant subset of JavaScript, helping developers avoid the bad parts and write more reliable, readable, and maintainable code.",
-                "category": "tech",
-                "available_quantity": 4,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328834793i/2998152.jpg"
-            },
-            {
-                "id": "11",
-                "title": "Design Patterns",
-                "author": "Gang of Four",
-                "description": "The classic book on software design patterns. Covers 23 foundational patterns that help developers solve common software design problems in an elegant and reusable way.",
-                "category": "tech",
-                "available_quantity": 5,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348027904i/85009.jpg"
-            },
-            {
-                "id": "12",
-                "title": "Structure and Interpretation of Computer Programs",
-                "author": "Harold Abelson",
-                "description": "Known as SICP, this legendary MIT textbook teaches the principles of computer programming using Scheme. Widely considered one of the greatest computer science books ever written.",
-                "category": "tech",
-                "available_quantity": 3,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1391032527i/43713.jpg"
-            },
-            {
-                "id": "13",
-                "title": "A Brief History of Time",
-                "author": "Stephen Hawking",
-                "description": "Stephen Hawking explores the universe from the Big Bang to black holes in plain language. A revolutionary book that made complex physics accessible to everyday readers worldwide.",
-                "category": "science",
-                "available_quantity": 5,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1333578746i/3869.jpg"
-            },
-            {
-                "id": "14",
-                "title": "Sapiens",
-                "author": "Yuval Noah Harari",
-                "description": "A sweeping narrative of human history from the Stone Age to the modern era, exploring how biology, culture, and ideas shaped humanity across thousands of years of civilization.",
-                "category": "science",
-                "available_quantity": 7,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703329308i/23692271.jpg"
-            },
-            {
-                "id": "15",
-                "title": "The Selfish Gene",
-                "author": "Richard Dawkins",
-                "description": "Dawkins presents a gene-centered view of evolution, arguing that genes are the primary unit of selection. A landmark work that transformed how we think about biology and human nature.",
-                "category": "science",
-                "available_quantity": 4,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1366758096i/61535.jpg"
-            },
-            {
-                "id": "16",
-                "title": "The Origin of Species",
-                "author": "Charles Darwin",
-                "description": "Darwin's groundbreading work introducing the theory of natural selection. One of the most influential scientific books ever written, it forever changed our understanding of life on Earth.",
-                "category": "science",
-                "available_quantity": 6,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1409806270i/22463.jpg"
-            },
-            {
-                "id": "17",
-                "title": "Cosmos",
-                "author": "Carl Sagan",
-                "description": "Carl Sagan takes readers on a journey through the universe, exploring the origins of life, the nature of science, and humanity's place in the vast cosmic expanse with poetic brilliance.",
-                "category": "science",
-                "available_quantity": 8,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388180424i/55030.jpg"
-            },
-            {
-                "id": "18",
-                "title": "The Gene: An Intimate History",
-                "author": "Siddhartha Mukherjee",
-                "description": "A compelling history of the gene and how our understanding of heredity and genetics has transformed medicine, identity, and the future of human life on this planet.",
-                "category": "science",
-                "available_quantity": 2,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1457892476i/27276428.jpg"
-            },
-            {
-                "id": "19",
-                "title": "Atomic Habits",
-                "author": "James Clear",
-                "description": "A proven framework for building good habits and breaking bad ones. James Clear reveals how tiny changes in behavior can lead to remarkable results over time through the power of systems.",
-                "category": "self_help",
-                "available_quantity": 12,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg"
-            },
-            {
-                "id": "20",
-                "title": "The 7 Habits of Highly Effective People",
-                "author": "Stephen R. Covey",
-                "description": "One of the most inspiring books ever written. Covey presents a principle-centered approach to personal and professional effectiveness through seven transformative habits.",
-                "category": "self_help",
-                "available_quantity": 9,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421842784i/36072.jpg"
-            },
-            {
-                "id": "21",
-                "title": "Think and Grow Rich",
-                "author": "Napoleon Hill",
-                "description": "After studying over 500 successful people, Hill distilled their wisdom into 13 principles for achieving success. A timeless classic that has inspired millions of readers worldwide.",
-                "category": "self_help",
-                "available_quantity": 7,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1463241782i/30186948.jpg"
-            },
-            {
-                "id": "22",
-                "title": "Harry Potter and the Sorcerer's Stone",
-                "author": "J.K. Rowling",
-                "description": "The first book in the legendary Harry Potter series. An orphaned boy discovers he is a wizard and begins his journey at Hogwarts School of Witchcraft and Wizardry.",
-                "category": "fantasy",
-                "available_quantity": 15,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1474154022i/3.jpg"
-            },
-            {
-                "id": "23",
-                "title": "The Lord of the Rings",
-                "author": "J.R.R. Tolkien",
-                "description": "The ultimate fantasy epic. Frodo Baggins and his companions embark on a perilous quest to destroy the One Ring and defeat the dark lord Sauron in the unforgettable world of Middle-earth.",
-                "category": "fantasy",
-                "available_quantity": 6,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566425108i/33.jpg"
-            },
-            {
-                "id": "24",
-                "title": "Dune",
-                "author": "Frank Herbert",
-                "description": "Set on the desert planet Arrakis, Dune follows Paul Atreides as he navigates political intrigue, religion, and survival. A masterpiece of world-building and one of sci-fi's greatest novels.",
-                "category": "fantasy",
-                "available_quantity": 5,
-                "image_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg"
-            }
-        ]
-    }
+{
+    "categories": [
+        { "id": "1", "name": "All", "value": "all" },
+        { "id": "2", "name": "Story", "value": "story" },
+        { "id": "3", "name": "Tech", "value": "tech" },
+        { "id": "4", "name": "Science", "value": "science" },
+        { "id": "5", "name": "Self Help", "value": "self_help" },
+        { "id": "6", "name": "Fantasy", "value": "fantasy" },
+        { "id": "7", "name": "History", "value": "history" },
+        { "id": "8", "name": "Biography", "value": "biography" }
+    ],
+    "books": [
+        {
+            "id": "1",
+            "title": "The Midnight Library",
+            "author": "Matt Haig",
+            "description": "Between life and death there is a library with infinite books, each representing a different life you could have lived. Nora Seed must decide what makes life worth living.",
+            "category": "story",
+            "available_quantity": 5,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780525559474-L.jpg"
+        },
+        {
+            "id": "2",
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "description": "A gripping tale of racial injustice and childhood innocence in the American South, seen through the eyes of young Scout Finch and her father, lawyer Atticus Finch.",
+            "category": "story",
+            "available_quantity": 7,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg"
+        },
+        {
+            "id": "3",
+            "title": "The Alchemist",
+            "author": "Paulo Coelho",
+            "description": "A young shepherd named Santiago travels from Spain to Egypt in search of treasure. Along the way he discovers that the real treasure lies in the journey itself.",
+            "category": "story",
+            "available_quantity": 9,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg"
+        },
+        {
+            "id": "4",
+            "title": "1984",
+            "author": "George Orwell",
+            "description": "A dystopian novel set in a totalitarian society ruled by Big Brother. Winston Smith secretly rebels against the oppressive regime in a chilling tale of surveillance and control.",
+            "category": "story",
+            "available_quantity": 6,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
+        },
+        {
+            "id": "5",
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "description": "Set in the Jazz Age, this novel follows the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan, exploring themes of wealth and the American Dream.",
+            "category": "story",
+            "available_quantity": 4,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
+        },
+        {
+            "id": "6",
+            "title": "Pride and Prejudice",
+            "author": "Jane Austen",
+            "description": "The story of Elizabeth Bennet and the proud Mr. Darcy as they navigate issues of marriage, morality, and misconception in 19th century England. A timeless classic of English literature.",
+            "category": "story",
+            "available_quantity": 8,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg"
+        },
+        {
+            "id": "7",
+            "title": "The Kite Runner",
+            "author": "Khaled Hosseini",
+            "description": "A powerful story of friendship, guilt, and redemption set against the backdrop of Afghanistan's turbulent history from the fall of the monarchy to the Taliban regime.",
+            "category": "story",
+            "available_quantity": 6,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781594631931-L.jpg"
+        },
+        {
+            "id": "8",
+            "title": "Gone with the Wind",
+            "author": "Margaret Mitchell",
+            "description": "An epic tale of love and loss set during the American Civil War and Reconstruction era, following the headstrong Scarlett O'Hara and the roguish Rhett Butler.",
+            "category": "story",
+            "available_quantity": 4,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781451635621-L.jpg"
+        },
+        {
+            "id": "9",
+            "title": "Clean Code",
+            "author": "Robert C. Martin",
+            "description": "A handbook of agile software craftsmanship that teaches programmers how to write clean, readable, and maintainable code with practical examples and timeless principles.",
+            "category": "tech",
+            "available_quantity": 8,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg"
+        },
+        {
+            "id": "10",
+            "title": "The Pragmatic Programmer",
+            "author": "Andrew Hunt & David Thomas",
+            "description": "A collection of tips and best practices for software developers covering topics from personal responsibility to architectural techniques for writing flexible and maintainable code.",
+            "category": "tech",
+            "available_quantity": 6,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780135957059-L.jpg"
+        },
+        {
+            "id": "11",
+            "title": "You Don't Know JS",
+            "author": "Kyle Simpson",
+            "description": "A deep dive into the core mechanisms of JavaScript. This book series challenges common assumptions and teaches developers how JavaScript truly works under the hood.",
+            "category": "tech",
+            "available_quantity": 10,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781491924464-L.jpg"
+        },
+        {
+            "id": "12",
+            "title": "JavaScript: The Good Parts",
+            "author": "Douglas Crockford",
+            "description": "Douglas Crockford identifies the elegant subset of JavaScript, helping developers avoid the bad parts and write more reliable, readable, and maintainable code.",
+            "category": "tech",
+            "available_quantity": 4,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780596517748-L.jpg"
+        },
+        {
+            "id": "13",
+            "title": "Design Patterns",
+            "author": "Gang of Four",
+            "description": "The classic book on software design patterns. Covers 23 foundational patterns that help developers solve common software design problems in an elegant and reusable way.",
+            "category": "tech",
+            "available_quantity": 5,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780201633610-L.jpg"
+        },
+        {
+            "id": "14",
+            "title": "Structure and Interpretation of Computer Programs",
+            "author": "Harold Abelson",
+            "description": "Known as SICP, this legendary MIT textbook teaches the principles of computer programming using Scheme. Widely considered one of the greatest computer science books ever written.",
+            "category": "tech",
+            "available_quantity": 3,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780262510875-L.jpg"
+        },
+        {
+            "id": "15",
+            "title": "Introduction to Algorithms",
+            "author": "Thomas H. Cormen",
+            "description": "Known as CLRS, this is the most comprehensive and authoritative book on algorithms. Essential reading for every computer science student and professional developer.",
+            "category": "tech",
+            "available_quantity": 4,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg"
+        },
+        {
+            "id": "16",
+            "title": "A Brief History of Time",
+            "author": "Stephen Hawking",
+            "description": "Stephen Hawking explores the universe from the Big Bang to black holes in plain language. A revolutionary book that made complex physics accessible to everyday readers worldwide.",
+            "category": "science",
+            "available_quantity": 5,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg"
+        },
+        {
+            "id": "17",
+            "title": "Sapiens",
+            "author": "Yuval Noah Harari",
+            "description": "A sweeping narrative of human history from the Stone Age to the modern era, exploring how biology, culture, and ideas shaped humanity across thousands of years of civilization.",
+            "category": "science",
+            "available_quantity": 7,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780062316110-L.jpg"
+        },
+        {
+            "id": "18",
+            "title": "The Selfish Gene",
+            "author": "Richard Dawkins",
+            "description": "Dawkins presents a gene-centered view of evolution, arguing that genes are the primary unit of selection. A landmark work that transformed how we think about biology and human nature.",
+            "category": "science",
+            "available_quantity": 4,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780198788607-L.jpg"
+        },
+        {
+            "id": "19",
+            "title": "The Origin of Species",
+            "author": "Charles Darwin",
+            "description": "Darwin's groundbreaking work introducing the theory of natural selection. One of the most influential scientific books ever written, it forever changed our understanding of life on Earth.",
+            "category": "science",
+            "available_quantity": 6,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780140432053-L.jpg"
+        },
+        {
+            "id": "20",
+            "title": "Cosmos",
+            "author": "Carl Sagan",
+            "description": "Carl Sagan takes readers on a journey through the universe, exploring the origins of life, the nature of science, and humanity's place in the vast cosmic expanse with poetic brilliance.",
+            "category": "science",
+            "available_quantity": 8,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780345539434-L.jpg"
+        },
+        {
+            "id": "21",
+            "title": "The Gene: An Intimate History",
+            "author": "Siddhartha Mukherjee",
+            "description": "A compelling history of the gene and how our understanding of heredity and genetics has transformed medicine, identity, and the future of human life on this planet.",
+            "category": "science",
+            "available_quantity": 2,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781476733500-L.jpg"
+        },
+        {
+            "id": "22",
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "description": "A proven framework for building good habits and breaking bad ones. James Clear reveals how tiny changes in behavior can lead to remarkable results over time through the power of systems.",
+            "category": "self_help",
+            "available_quantity": 12,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
+        },
+        {
+            "id": "23",
+            "title": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "description": "One of the most inspiring books ever written. Covey presents a principle-centered approach to personal and professional effectiveness through seven transformative habits.",
+            "category": "self_help",
+            "available_quantity": 9,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781982137274-L.jpg"
+        },
+        {
+            "id": "24",
+            "title": "Think and Grow Rich",
+            "author": "Napoleon Hill",
+            "description": "After studying over 500 successful people, Hill distilled their wisdom into 13 principles for achieving success. A timeless classic that has inspired millions of readers worldwide.",
+            "category": "self_help",
+            "available_quantity": 7,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781585424337-L.jpg"
+        },
+        {
+            "id": "25",
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "description": "A guide to spiritual enlightenment that teaches readers to live in the present moment. One of the most transformative and practically useful books ever written on mental peace.",
+            "category": "self_help",
+            "available_quantity": 8,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781577314806-L.jpg"
+        },
+        {
+            "id": "26",
+            "title": "Harry Potter and the Sorcerer's Stone",
+            "author": "J.K. Rowling",
+            "description": "The first book in the legendary Harry Potter series. An orphaned boy discovers he is a wizard and begins his journey at Hogwarts School of Witchcraft and Wizardry.",
+            "category": "fantasy",
+            "available_quantity": 15,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780439708180-L.jpg"
+        },
+        {
+            "id": "27",
+            "title": "The Lord of the Rings",
+            "author": "J.R.R. Tolkien",
+            "description": "The ultimate fantasy epic. Frodo Baggins and his companions embark on a perilous quest to destroy the One Ring and defeat the dark lord Sauron in the unforgettable world of Middle-earth.",
+            "category": "fantasy",
+            "available_quantity": 6,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780618640157-L.jpg"
+        },
+        {
+            "id": "28",
+            "title": "Dune",
+            "author": "Frank Herbert",
+            "description": "Set on the desert planet Arrakis, Dune follows Paul Atreides as he navigates political intrigue, religion, and survival. A masterpiece of world-building and one of sci-fi's greatest novels.",
+            "category": "fantasy",
+            "available_quantity": 5,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780441013593-L.jpg"
+        },
+        {
+            "id": "29",
+            "title": "The Name of the Wind",
+            "author": "Patrick Rothfuss",
+            "description": "The tale of Kvothe, a magically gifted young man who grows to be the most notorious wizard his world has ever seen. A beautifully written fantasy of adventure and legend.",
+            "category": "fantasy",
+            "available_quantity": 7,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780756404079-L.jpg"
+        },
+        {
+            "id": "30",
+            "title": "A Game of Thrones",
+            "author": "George R.R. Martin",
+            "description": "The first book in the A Song of Ice and Fire series. Noble families fight for control of the Iron Throne in a world where summers last decades and winters can last a lifetime.",
+            "category": "fantasy",
+            "available_quantity": 9,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780553593716-L.jpg"
+        },
+        {
+            "id": "31",
+            "title": "Sapiens: A Brief History",
+            "author": "Yuval Noah Harari",
+            "description": "Tracing the history of humankind from the Stone Age through the 21st century, Harari explores how biology and history defined us and enhanced our understanding of what it means to be human.",
+            "category": "history",
+            "available_quantity": 6,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780062316110-L.jpg"
+        },
+        {
+            "id": "32",
+            "title": "The Diary of a Young Girl",
+            "author": "Anne Frank",
+            "description": "The real diary of Anne Frank, a Jewish girl who hid with her family in Amsterdam during the Nazi occupation. A heartbreaking and unforgettable first-person account of World War II.",
+            "category": "history",
+            "available_quantity": 8,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780553296983-L.jpg"
+        },
+        {
+            "id": "33",
+            "title": "Guns, Germs, and Steel",
+            "author": "Jared Diamond",
+            "description": "A brilliant examination of why some civilizations came to dominate others, exploring the geographic, environmental, and biological factors that shaped human history across continents.",
+            "category": "history",
+            "available_quantity": 4,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780393354324-L.jpg"
+        },
+        {
+            "id": "34",
+            "title": "The Art of War",
+            "author": "Sun Tzu",
+            "description": "Written in 5th century BC, this ancient Chinese military treatise has influenced military strategy, business tactics, and legal strategy for over two thousand years worldwide.",
+            "category": "history",
+            "available_quantity": 11,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781599869773-L.jpg"
+        },
+        {
+            "id": "35",
+            "title": "Steve Jobs",
+            "author": "Walter Isaacson",
+            "description": "The exclusive biography of Apple co-founder Steve Jobs, based on more than forty interviews. A riveting story of the passion, creativity, and obsession that drove Jobs to revolutionize technology.",
+            "category": "biography",
+            "available_quantity": 7,
+            "image_url": "https://m.media-amazon.com/images/I/71mmowWE5iL.jpg"
+        },
+        {
+            "id": "36",
+            "title": "Long Walk to Freedom",
+            "author": "Nelson Mandela",
+            "description": "The autobiography of Nelson Mandela, one of the great moral and political leaders of our time. An account of his journey from rural South Africa to 27 years in prison to the presidency.",
+            "category": "biography",
+            "available_quantity": 5,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9780316548182-L.jpg"
+        },
+        {
+            "id": "37",
+            "title": "Becoming",
+            "author": "Michelle Obama",
+            "description": "In her memoir, former First Lady Michelle Obama invites readers into her world, chronicling the experiences that shaped her from the South Side of Chicago to the White House.",
+            "category": "biography",
+            "available_quantity": 9,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781524763138-L.jpg"
+        },
+        {
+            "id": "38",
+            "title": "Elon Musk",
+            "author": "Walter Isaacson",
+            "description": "The biography of the world's most controversial entrepreneur. Isaacson follows Musk through his tumultuous personal life and his world-changing companies — Tesla, SpaceX, and X.",
+            "category": "biography",
+            "available_quantity": 6,
+            "image_url": "https://covers.openlibrary.org/b/isbn/9781982181284-L.jpg"
+        }
+    ]
+}

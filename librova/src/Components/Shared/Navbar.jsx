@@ -30,7 +30,7 @@ const Navbar = () => {
                     </button>
                     <div>
                         <Link className="no-underline text-xl text-[#1A1A1A]" href='/'>
-                            <Image src={logo} alt="logo" width={50} height={50} />
+                            <Image className="w-15 h-auto object-contain" src={logo} alt="logo" width={50} height={50} />
                             LibRova
                         </Link>
                     </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
                 <ul className="hidden items-center gap-4 md:flex">
                     <li><Navlink href="/">Home</Navlink></li>
-                    <li><Navlink href="/all-books">All Books</Navlink></li>
+                    <li><Navlink href="/books">All Books</Navlink></li>
                     <li><Navlink href="/profile">My Profile</Navlink></li>
                 </ul>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <div className="md:hidden mt-2 rounded-2xl bg-[#F9F7F2] shadow px-4 py-3">
                     <ul className="flex flex-col gap-2">
                         <li><Navlink href="/" className="block py-2">Home</Navlink></li>
-                        <li><Navlink href="/all-books" className="block py-2">All Books</Navlink></li>
+                        <li><Navlink href="/books" className="block py-2">All Books</Navlink></li>
                         <li><Navlink href="/profile" className="block py-2">My Profile</Navlink></li>
                     </ul>
                 </div>
