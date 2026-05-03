@@ -2,8 +2,9 @@ import Link from 'next/link';
 
 const LeftSideBar = async ({ activeCategory, categories }) => {
     return (
-        <div className='flex flex-col gap-2'>
-            <h2 className="text-lg font-bold">All Categories</h2>
+        <div className='mb-10'>
+            <h2 className="text-lg font-bold text-center">All Categories</h2>
+            <div className='flex gap-2 flex-wrap justify-center items-center mt-2'>
             {categories.map(category => (
                 <Link
                     key={category.id}
@@ -18,6 +19,7 @@ const LeftSideBar = async ({ activeCategory, categories }) => {
                     {category.name}
                 </Link>
             ))}
+            </div>
         </div>
     );
 };
