@@ -9,7 +9,7 @@ const BookDetailsButton = ({ bookId }) => {
     const handleBookDetails = () => {
         if(session)
         {
-            router.push(`/books/details/${book.id}`);
+            router.push(`/books/details/${bookId}`);
         }
         else
         {
