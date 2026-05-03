@@ -11,9 +11,6 @@ const BooksPage = async ({ params, searchParams }) => {
     const { search } = await searchParams;
     const categories = await GetCategory();
     const books = await GetBooksByCategory(category, search);
-    const handleBookDetails = () => {
-
-    } 
     return (
         <div className='container mx-auto py-10 px-4'>
             <SearchBar></SearchBar>
