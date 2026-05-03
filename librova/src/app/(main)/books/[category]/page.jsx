@@ -3,13 +3,16 @@ import React from 'react';
 import LeftSideBar from './LeftSideBar';
 import Link from 'next/link';
 import Image from 'next/image';
+import SearchBar from '@/Components/Shared/SearchBar';
 
-const BooksPage = async ({ params }) => {
+const BooksPage = async ({ params, searchParams }) => {
     const { category } = await params;
+    const { search } = await searchParams;
     const categories = await GetCategory();
-    const books = await GetBooksByCategory(category);
+    const books = await GetBooksByCategory(category, search);
     return (
-        <div className='container mx-auto py-10'>
+        <div className='container mx-auto py-10 px-4'>
+            <SearchBar></SearchBar>
             <div className='flex gap-6'>
                 <div className='w-64 shrink-0'>
                     <LeftSideBar categories={categories} activeCategory={category}></LeftSideBar>
@@ -18,7 +21,7 @@ const BooksPage = async ({ params }) => {
                     <div className='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                         {books.map(book => (
                             <div key={book.id} className=''>
-                                <div  className='border rounded-xl bg-white p-3'>
+                                <div className='border rounded-xl bg-white p-3'>
                                     <Image
                                         src={book.image_url}
                                         alt={book.title}

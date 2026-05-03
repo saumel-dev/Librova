@@ -3,10 +3,15 @@ export const GetBooks = async () => {
     return await res.json();
 };
 
-export const GetBooksByCategory = async (category) => {
+export const GetBooksByCategory = async (category, search = "") => {
     const url = category === "all"? "http://localhost:5000/books" : `http://localhost:5000/books?category=${category}`
     const res = await fetch(url)
-    return await res.json();
+    let books = await res.json();
+    if(search)
+    {
+        books = books.filter(book => book.title.toLowerCase().includes(search.toLocaleLowerCase()));
+    }
+    return books;
 }
 export const GetBooksById = async (id) => {
     const res = await fetch(`http://localhost:5000/books/${id}`)
