@@ -11,7 +11,7 @@ const Banner = () => {
                     <h1 className=''>Find Your Next Read</h1>
                 </div>
                 <div>
-                    <Navlink href="/all-books"><button className='flex flex-row justify-center items-center gap-2 px-4 py-2 rounded-full text-white bg-black transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20 active:scale-95'>Browse Now <FiArrowUpRight></FiArrowUpRight></button></Navlink>
+                    <Navlink href="/books"><button className='flex flex-row justify-center items-center gap-2 px-4 py-2 rounded-full text-white bg-black transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20 active:scale-95'>Browse Now <FiArrowUpRight></FiArrowUpRight></button></Navlink>
                 </div>
             </div>
         </div>

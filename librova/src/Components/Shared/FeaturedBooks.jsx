@@ -14,7 +14,7 @@ const FeaturedBooks = async () => {
             <div className='mt-6 animate__animated animate__slideInUp flex flex-wrap justify-center items-center gap-4 justify-items-center'>
                 {
                     books.slice(4, 8).map(book => (
-                        <Card key={book.id} className="min-h-90 w-70 overflow-hidden rounded-3xl">
+                        <Card key={book.id} className="hover:-translate-y-2 ease-in-out transition-all duration-300 hover:shadow-lg hover:shadow-black/50 active:scale-95 min-h-90 w-70 overflow-hidden rounded-3xl">
                             {/* Background image */}
                             <Image
                                 alt="NEO Home Robot"

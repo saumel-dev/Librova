@@ -22,9 +22,9 @@ const BooksPage = async ({ params, searchParams }) => {
                     <LeftSideBar categories={categories} activeCategory={category}></LeftSideBar>
                 </div>
                 <div className='flex-1'>
-                    <div className='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+                    <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                         {books.map(book => (
-                            <div key={book.id} className=''>
+                            <div key={book.id} className='w-60'>
                                 <div className='border rounded-xl bg-white p-3'>
                                     <Image
                                         src={book.image_url}
