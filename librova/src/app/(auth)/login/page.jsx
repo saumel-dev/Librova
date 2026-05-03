@@ -52,8 +52,8 @@ const LoginPage = () => {
     };
     return (
         <div className='min-h-screen w-full flex justify-center items-center'>
-            <div className='bg-white animate__animated animate__pulse backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
-                <Form action={""} className="flex w-96 text-white flex-col gap-4" onSubmit={handleLogin}>
+            <div className='bg-white animate__animated animate__pulse backdrop-blur-md border border-white/20 px-5 py-10 rounded-2xl'>
+                <Form action={""} className="flex w-75 md:w-96 text-white flex-col gap-4" onSubmit={handleLogin}>
                     <TextField
                         isRequired
                         name="email"
