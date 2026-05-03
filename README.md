@@ -6,7 +6,7 @@ A seamless and modern web application that digitizes the traditional library exp
 
 ## 🌐 Live URL
 
- **httpfs://lib-rova.vercel.app/**
+ **https://lib-rova.vercel.app/**
 
 ---
 
