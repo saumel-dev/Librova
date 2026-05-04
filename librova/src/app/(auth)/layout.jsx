@@ -1,3 +1,4 @@
+import Footer from '@/Components/Shared/Footer';
 import Navbar from '@/Components/Shared/Navbar';
 import { Toast } from '@heroui/react';
 import { Urbanist } from 'next/font/google';
@@ -16,7 +17,9 @@ const AuthLayout = ({ children }) => {
         <html>
             <body className={`${urbanist.className}`}>
                 <Toast.Provider placement={"top"}></Toast.Provider>
+                <Navbar></Navbar>
                 {children}
+                <Footer></Footer>
             </body>
         </html>
     );
