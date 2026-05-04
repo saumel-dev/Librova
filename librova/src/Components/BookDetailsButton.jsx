@@ -10,6 +10,8 @@ const BookDetailsButton = ({ bookId }) => {
         if(session)
         {
             router.push(`/books/details/${bookId}`);
+            console.log(session);
+            
         }
         else
         {

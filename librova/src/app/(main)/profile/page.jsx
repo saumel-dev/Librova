@@ -1,65 +1,44 @@
 'use client'
-import { Check } from '@gravity-ui/icons';
-import { Button, FieldError, Form, Input, Label, TextField, toast } from '@heroui/react';
-import { authClient } from '@/app/lib/auth-client';
+import { authClient } from '@/app/lib/auth-client'; // Ensure correct client import
+import { Button, Spinner } from '@heroui/react';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
-import 'animate.css'
-import { useRouter } from 'next/navigation';
-const noop = () => { };
-const ProfilePage = () => {
-    const router = useRouter();
-    const handleUpdate = async (e) => {
-        e.preventDefault();
-        await authClient.updateUser({
-            name: e.target.name.value,
-            image: e.target.image.value,
-        })
-        toast.success("Profile Updated Successfully", {
-            actionProps: {
-                children: "",
-                className: "bg-success text-success-foreground",
-                onPress: noop,
-            },
-            description: "Enjoy",
-        })
-        router.push('/')
-    }
-    return (
-        <div className='min-h-screen w-full flex justify-center items-center'>
-            <div className='bg-white animate__animated animate__pulse backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
-                <Form action={""} className="flex w-96 text-white flex-col gap-4" onSubmit={handleUpdate}>
-                    <h1 className='text-[#1A1A1A] text-center'>Update Your Information</h1>
-                    <TextField
-                        isRequired
-                        name="name"
-                        type="text"
-                    >
-                        <Label className='text-[#1A1A1A]'>Your Name</Label>
-                        <Input placeholder="john doe" />
-                        <FieldError />
-                    </TextField>
-                    <TextField
-                        isRequired
-                        name="image"
-                        type="text"
-                    >
-                        <Label className='text-[#1A1A1A]'>Photo</Label>
-                        <Input placeholder="Enter your photo URL" />
-                        <div className="flex gap-2 justify-center mt-2">
-                            <Button type="submit">
-                                <Check />
-                                Submit
-                            </Button>
-                            <Button type="reset" variant="secondary">
-                                Reset
-                            </Button>
-                        </div>
-                    </TextField>
 
-                </Form>
+const ProfileShow = () => {
+
+    const { data, isPending } = authClient.useSession();
+    if (isPending) {
+        return <div className='container mx-auto'>
+            <div className="flex flex-col items-center gap-2 min-h-screen justify-center">
+                <Spinner color="" />
+                <span className="text-xs text-muted"></span>
             </div>
-        </div >
+        </div>;
+    }
+    const { user } = data;
+
+    return (
+        <div className='mx-auto px-2'>
+            <div className='p-30 flex justify-center flex-col items-center rounded-lg shadow-sm bg-white'>
+                <div className='flex flex-row gap-6 justify-start'>
+                    <div className=''>
+                        <h2 className='text-xl font-bold'>UserName: {user.name}</h2>
+                        <p className='text-gray-600'>UserEmail: {user.email}</p>
+                        <h2>User avatar:</h2>
+                        <Image
+                            src={user.image}
+                            alt={user.name}
+                            className="rounded-xl mt-2 border"
+                            height={300}
+                            width={200}
+                        />
+                    </div>
+                </div>
+                <Link href="/profile/update"><Button className="mt-5">Update Profile</Button></Link>
+            </div>
+        </div>
     );
 };
 
-export default ProfilePage;
+export default ProfileShow;
