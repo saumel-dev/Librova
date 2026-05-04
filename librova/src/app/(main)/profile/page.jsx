@@ -4,7 +4,7 @@ import { Button, Spinner } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
+import 'animate.css'
 const ProfileShow = () => {
 
     const { data, isPending } = authClient.useSession();
@@ -20,7 +20,7 @@ const ProfileShow = () => {
 
     return (
         <div className='mx-auto px-2'>
-            <div className='p-30 flex justify-center flex-col items-center rounded-lg shadow-sm bg-white'>
+            <div className='p-20 animate__animated animate__pulse flex justify-center flex-col items-center rounded-2xl shadow-sm bg-white'>
                 <div className='flex flex-row gap-6 justify-start'>
                     <div className=''>
                         <h2 className='text-xl font-bold'>UserName: {user.name}</h2>

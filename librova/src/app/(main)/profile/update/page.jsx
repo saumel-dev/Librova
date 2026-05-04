@@ -25,9 +25,9 @@ const ProfilePage = () => {
         router.push('/')
     }
     return (
-        <div className='min-h-screen w-full flex justify-center items-center'>
-            <div className='bg-white animate__animated animate__pulse backdrop-blur-md border border-white/20 p-8 rounded-2xl'>
-                <Form action={""} className="flex w-96 text-white flex-col gap-4" onSubmit={handleUpdate}>
+        <div className='mx-auto px-2'>
+            <div className='bg-white animate__animated animate__pulse backdrop-blur-md border border-white/20 p-20 mx-2 rounded-2xl'>
+                <Form action={""} className="flex w-full max-w-96 text-white flex-col gap-4" onSubmit={handleUpdate}>
                     <h1 className='text-[#1A1A1A] text-center'>Update Your Information</h1>
                     <TextField
                         isRequired
